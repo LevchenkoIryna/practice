@@ -9,85 +9,108 @@
 /* вторичный цвет фона #F5F5F5 */
 
 :root {
-    --primary-text-color: rgba(0, 0, 0, 0.8);
-    --title-text-color: #000000;
-    --accent-color: #18A0FB;
-    --primary-white-color: #FFFFFF;
+  --primary-text-color: rgba(0, 0, 0, 0.8);
+  --title-text-color: #000000;
+  --accent-color: #18a0fb;
+  --primary-white-color: #ffffff;
 }
 
 body {
-    background-color: var(--primary-white-color);
-    color: var(--primary-text-color);
-    
+  background-color: var(--primary-white-color);
+  color: var(--primary-text-color);
+
+  /* Шрифт */
+  font-family: Montserrat, sans-serif;
+  /* Расстояние между буквами */
+  letter-spacing: -0.015em;
 }
 
 .list {
-    list-style: none;
+  list-style: none;
 }
 
+/* Logo */
+/* line-height: 32px; 
+    берем калькулятор 32/28=1.14 */
 
 .logo {
-    color: var(--title-text-color);
+  color: var(--title-text-color);
+  font-family: Comfortaa, cursive;
+  font-size: 28px;
+  line-height: 1.14;
 }
 
 .logo:hover {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 /* Site-nav */
 
 .site-nav .link {
-    color: var(--accent-color);
+  color: var(--accent-color);
+
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.2;
 }
 
-.site-nav .link:hover, 
-.site-nav .link:focus{
-    color: var(--title-text-color);
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--title-text-color);
 }
 
 .site-nav .link.current {
-    color: var(--title-text-color);
+  color: var(--title-text-color);
 }
 
 /* Hero */
+/* проверяем настройки браузера по умолчанию и смотрим на жирность шрифт */
 
 .hero-title {
-    color: var(--title-text-color);
+  color: var(--title-text-color);
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 1.43;
+  text-align: center;
 }
 
 /* Section */
 
 .section-title {
-    color: var(--title-text-color);
+  color: var(--title-text-color);
 }
 
 /* Features */
 
 .feature-list .title {
-    color: var(--title-text-color);
+  color: var(--title-text-color);
 }
-
-
 
 /* Examples */
 
 .work-list .title {
-    color: var(--title-text-color);
+  color: var(--title-text-color);
 }
 
 /* Button */
+/* чтобы кнопка унаследовала шрифт от боди наверняка
+button {font-family: inherit;}
+*/
 
 .button {
-    color: var(--title-text-color);
-    background-color: var(--primary-white-color);
+  color: var(--title-text-color);
+  background-color: var(--primary-white-color);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.2;
 }
 
 .button.primary {
-    color: var(--accent-color);
-    background-color: var(--primary-white-color);
+  color: var(--accent-color);
+  background-color: var(--primary-white-color);
 }
 
 .button.secondary {
-    background-color: var(--accent-color);
-    color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
 }
