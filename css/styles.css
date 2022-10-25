@@ -8,6 +8,18 @@
 
 /* вторичный цвет фона #F5F5F5 */
 
+/* html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  } 
+ */
+ 
+ 
 :root {
   --primary-text-color: rgba(0, 0, 0, 0.8);
   --title-text-color: #000000;
@@ -31,6 +43,13 @@ body {
   list-style: none;
 }
 
+.container {
+margin-left: auto;
+margin-right: auto;
+width: 1000;
+outline: 2px solid tomato;
+}
+
 /* Logo */
 /* line-height: 32px; 
     берем калькулятор 32/28=1.14 */
@@ -45,6 +64,12 @@ body {
 
 .logo:hover {
   color: var(--accent-color);
+}
+
+/* page-header */
+
+.page-header{
+  background-color: #ccc;
 }
 
 /* Site-nav */
