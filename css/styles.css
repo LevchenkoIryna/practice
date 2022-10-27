@@ -18,7 +18,7 @@
     box-sizing: border-box;
   } 
  */
- 
+
 
 :root {
   --primary-text-color: rgba(0, 0, 0, 0.8);
@@ -38,15 +38,17 @@ body {
   letter-spacing: -0.015em;
   font-size: 18px;
   line-height: 1.67;
-
-  
 }
 
+/* Утилиты */
 .list {
   padding: 0;
   margin: 0;
   list-style: none;
+  
 }
+
+
 
 /* h1, h2, h3, h4, h5, h6, p {
   margin-top: 0;
@@ -55,13 +57,16 @@ body {
  */
 
 .container {
-margin-left: auto;
-margin-right: auto;
-width: 1440;
-outline: 2px solid tomato;
+  /* margin-left: auto;
+  margin-right: auto; */
+  width: 1500;
+  outline: 2px solid tomato;
 
-margin-left: 400px;
-margin-right: 400px;
+  margin-left: 80px;
+  margin-right: 80px;
+  padding-left: 10px;
+  padding-right: 10px;
+  
 }
 
 /* Logo */
@@ -82,15 +87,39 @@ margin-right: 400px;
 
 /* page-header */
 
-.page-header{
-  background-color: #ccc;
+/* .page-header {
+  
+} */
+
+/* Main nav */
+.main-nav {
+  display: flex;
+  align-items: center;
 }
 
 /* Site-nav */
 
-.site-nav .link {
-  color: var(--accent-color);
+.site-nav {
+  display: flex;
+  margin-left: 70px;
+  
+}
 
+.site-nav .item + .item {
+  margin-left: 40px;
+}
+
+/* или можно так
+.site-nav .item:not(:last-child) {
+  margin-right: 40px;
+} */
+
+.site-nav .link {
+  display: block;
+  padding-top: 21px;
+  padding-bottom: 21px;
+
+  color: var(--accent-color);
   font-weight: 500;
   font-size: 15px;
   line-height: 1.2;
@@ -106,6 +135,18 @@ margin-right: 400px;
   color: var(--title-text-color);
 }
 
+/* Auth-nav */
+
+.auth-nav {
+  display: flex;
+  margin-left: auto;
+}
+
+.auth-nav .item + .item {
+  margin-left: 12px;
+}
+
+
 /* Hero */
 /* проверяем настройки браузера по умолчанию и смотрим на жирность шрифт */
 
@@ -116,14 +157,11 @@ margin-right: 400px;
 .hero-title {
   margin-top: 0;
   margin-bottom: 40px;
-  
-  
 
   color: var(--title-text-color);
   font-weight: 400;
   font-size: 56px;
   line-height: 1.43;
-  
 }
 
 /* Section */
@@ -131,7 +169,6 @@ margin-right: 400px;
 .section {
   padding-top: 120px;
   padding-bottom: 120px;
-
 }
 
 .section.no-padding {
@@ -147,7 +184,6 @@ margin-right: 400px;
   font-weight: 400;
   font-size: 48px;
   line-height: 1.5;
-  
 }
 
 .section-title.centered {
@@ -157,11 +193,20 @@ margin-right: 400px;
 .section-description {
   margin-top: 0;
   margin-bottom: 80px;
-    font-size: 36px;
-    line-height: 1.39;
+  font-size: 36px;
+  line-height: 1.39;
 }
 
 /* Features Examples*/
+
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.feature-list .item {
+  width: 686px;
+}
 
 .feature-list .title,
 .work-list .title {
@@ -201,7 +246,7 @@ button {font-family: inherit;}
   display: inline-block;
   border: 1px solid transparent;
   border-radius: 6px;
-  padding: 11px 32px;
+  padding: 11px 34px;
   min-width: 130px;
   
 
@@ -214,12 +259,15 @@ button {font-family: inherit;}
   text-align: center;
 }
 
+.button.hero {
+  margin-bottom: 156px;
+}
+
 .button.primary {
   border-color: var(--accent-color);
 
   color: var(--accent-color);
   background-color: var(--primary-white-color);
-  
 }
 
 .button.secondary {
