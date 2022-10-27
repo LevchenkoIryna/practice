@@ -19,7 +19,6 @@
   } 
  */
 
-
 :root {
   --primary-text-color: rgba(0, 0, 0, 0.8);
   --title-text-color: #000000;
@@ -38,6 +37,7 @@ body {
   letter-spacing: -0.015em;
   font-size: 18px;
   line-height: 1.67;
+  
 }
 
 /* Утилиты */
@@ -45,10 +45,7 @@ body {
   padding: 0;
   margin: 0;
   list-style: none;
-  
 }
-
-
 
 /* h1, h2, h3, h4, h5, h6, p {
   margin-top: 0;
@@ -57,16 +54,13 @@ body {
  */
 
 .container {
-  /* margin-left: auto;
-  margin-right: auto; */
-  width: 1500;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1440px;
   outline: 2px solid tomato;
 
-  margin-left: 80px;
-  margin-right: 80px;
-  padding-left: 10px;
-  padding-right: 10px;
-  
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* Logo */
@@ -102,7 +96,6 @@ body {
 .site-nav {
   display: flex;
   margin-left: 70px;
-  
 }
 
 .site-nav .item + .item {
@@ -146,7 +139,6 @@ body {
   margin-left: 12px;
 }
 
-
 /* Hero */
 /* проверяем настройки браузера по умолчанию и смотрим на жирность шрифт */
 
@@ -186,7 +178,8 @@ body {
   line-height: 1.5;
 }
 
-.section-title.centered {
+.section-title.centered,
+.section-description.centered{
   text-align: center;
 }
 
@@ -199,13 +192,28 @@ body {
 
 /* Features Examples*/
 
+.client-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1020px;
+  margin: -30px -40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.client-list li {
+  margin: 30px 40px;
+}
+
 .feature-list {
   display: flex;
   flex-wrap: wrap;
+  margin: -40px -75px;
 }
 
 .feature-list .item {
-  width: 686px;
+  width: 625px;
+  margin: 40px 75px;
 }
 
 .feature-list .title,
@@ -223,6 +231,8 @@ body {
 /* Works */
 
 .work-list > .item {
+  display: flex;
+  align-items: center;
   padding-top: 80px;
   padding-bottom: 80px;
   background-color: var(--primary-white-color);
@@ -230,12 +240,25 @@ body {
 
 .work-list > .item:nth-child(even) {
   background-color: var(--secondary-text-color);
+  flex-direction: row-reverse;
 }
 
 .feature-list p {
   margin-top: 0;
   margin-bottom: 32px;
 }
+
+.work-list > .item:nth-child(2n + 1) > .content {
+  margin-left: 84px;
+}
+
+.work-list > .item:nth-child(2n) > .content {
+  margin-right: 84px;
+}
+
+/* signup */
+
+
 
 /* Button */
 /* чтобы кнопка унаследовала шрифт от боди наверняка
@@ -248,7 +271,6 @@ button {font-family: inherit;}
   border-radius: 6px;
   padding: 11px 34px;
   min-width: 130px;
-  
 
   color: var(--title-text-color);
   background-color: var(--primary-white-color);
